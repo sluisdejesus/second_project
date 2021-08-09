@@ -16,9 +16,6 @@ MongoClient.connect('mongodb://localhost:27017')
         const dietCollection = db.collection('diet');
         const transportCollection = createRouter(transportCollection);
         const dietCollection = createRouter(dietCollection);
-
-        
-
         })
 
         app.use('/api/transport', transportRouter)
