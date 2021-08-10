@@ -30,7 +30,8 @@ const createRouter = function(collection) {
         error.status(500)
         res.json ({ status:500 , error: err});
     });
-});
+});  
+
 
   return router;
 };
