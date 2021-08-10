@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 
-const TransportForm = ({handleCalculation}) => {
+const TransportForm = ({handleCalculation, calculation}) => {
     const [car, setCar] = useState(0)
     const [train, setTrain] = useState(0);
     const [bus, setBus] = useState(0);
@@ -41,7 +41,7 @@ const TransportForm = ({handleCalculation}) => {
 
 
     return(
-
+        <>
         <form onSubmit={handleSubmit}>
             <h1>Fill in your details</h1>
             <label htmlFor="car">How much do you drive a week?</label>
@@ -63,10 +63,12 @@ const TransportForm = ({handleCalculation}) => {
             
             <button onClick={handleSubmit}>Calculate</button>
 
-            
+     
                     
         </form>
-    
+        
+       <p>This is your total {calculation}</p> 
+    </>
     )
     
 
