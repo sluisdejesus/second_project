@@ -17,6 +17,21 @@ MongoClient.connect('mongodb://localhost:27017')
         app.use('/api/carbon', carbonRouter)
     })
 
+// app.post("/api/carbon", (req, res) => {
+//     const newData = req.body;
+//     (newData.)
+//         carbonCollection
+//             .insertOne(newData)
+//             .then ((result) => {
+//                 res.json(result.ops[0]);
+//             })
+//             .catch((err) => {
+//                 console.error(err);
+//                 res.status(500);
+//                 res.json ({status:500, error: err});
+//             });
+   
+// })
     
     .catch(console.error)
 

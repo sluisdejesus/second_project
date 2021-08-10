@@ -17,7 +17,20 @@ const createRouter = function(collection) {
     });
   });
 
-
+  router.post('/', (req, res) => {
+    const newData = req.body;
+    collection
+    .insertOne(newData)
+    .then((result) =>{
+        newData['_id'] = result['insertedId']
+        res.json(newData)
+    })
+    .catch( (err) => {
+        console.error(err)
+        error.status(500)
+        res.json ({ status:500 , error: err});
+    });
+});
 
   return router;
 };
