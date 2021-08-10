@@ -1,15 +1,11 @@
-use users;
+
+use co2Data;
 db.dropDatabase();
 
-db.userInfo.insertMany([
-    {
-      "Name":"Jeremy Clarkson",
-      "Diet":"Omnivore",
-      "Transport":"Car"
-    },
-    {
-        "Name":"Moby",
-        "Diet":"Vegan",
-        "Transport":"Bike"
-    }
-])
+db.carbon.insertOne({
+  car: '0',
+  train: '0',
+  bus:'0',
+  bike:'0',
+  meat: '0'
+});
