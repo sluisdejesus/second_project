@@ -1,11 +1,18 @@
 import TransportForm from './components/transport';
-import DietForm from "./components/diet";
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [calculation, setCalculation] = useState(0);
+
+  const handleCalculation = (values) => {
+    console.log(values)
+  }
   return (
+
 <>
-<TransportForm/>
+<TransportForm  handleCalculation = {handleCalculation}/>
 
 </>
   );

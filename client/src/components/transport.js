@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 
 
-const TransportForm = ({SelectTransport}) => {
+
+const TransportForm = ({handleCalculation}) => {
     const [car, setCar] = useState(0)
     const [train, setTrain] = useState(0);
     const [bus, setBus] = useState(0);
@@ -20,7 +21,15 @@ const TransportForm = ({SelectTransport}) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        console.log(car,train,bus,bike,meat)
+        const values = {
+            car:car,
+            train:train,
+            bus:bus,
+            bike:bike,
+            meat:meat
+        }
+
+        handleCalculation(values)
         setCar(0);
         setTrain(0);
         setBus(0);
