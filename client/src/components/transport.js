@@ -1,71 +1,55 @@
 import React, { useState } from 'react';
 
-// const ImportMissingFile = require('.')
 
-const FormView = function(form){
-    this.form:
-    this.allData = null;
-    
-}
-
-FormView.prototype.Events = function () {
-    MissingFile.subscribe('carbonCollection:data-loaded', (event) => {
-        const carField = document.querySelector('#car');
-        const carValues = event.detail[0].car;
-
-        const trainField = document.querySelector('#train');
-        const trainValues = event.detail[0].train;
-
-        const busField = document.querySelector('#bus');
-        const busValues = event.detail[0].bus;
-
-        const bikeField = document.querySelector('#bike');
-        const bikeValues = event.detail[0].bike;
-
-        const meatField = document.querySelector('#meat');
-        const meatValues = event.detail[0].meat;
-
-
-    })
-}
 
 const TransportForm = ({SelectTransport}) => {
-    const [transport, setTransport] = useState("");
-    const [C02Emisions, setC02Emisions] = useState("");
+    const [car, setCar] = useState("");
+    const [train, setTrain] = useState("");
+    const [bus, setBus] = useState("");
+    const [bike, setBike] = useState("");
+    const [meat, setMeat] = useState("");
     
 
     
-    const handleTransport = (ev) => setTransport(ev.target.value);
-    const handleC02Emsions = (ev) => setC02Emisions(ev.target.value);
+    const handleCar = (event) => setCar(event.target.value);
+    const handleTrain = (event) => setTrain(event.target.value);
+    const handleBus = (event) => setBus(event.target.value);
+    const handleBike = (event) => setBike(event.target.value);
+    const handleMeat = (event) => setMeat(event.target.value);
 
-    const handleSubmit = ev => {
-        ev.preventDefault();
+
+    const handleSubmit = event => {
+        event.preventDefault();
         
-        setTransport("");
-        setC02Emisions("");
+        setCar("");
+        setTrain("");
+        setBus("");
+        setBike("");
+        setMeat("");
     }
 
 
 
 
     return(
+
         <form onSubmit={handleSubmit}>
             <h1>Fill in your details</h1>
-            <label htmlFor="ar">How much do you drive a week?</label>
-            <input type = "text" id= "car"></input>
+            <label htmlFor="car">How much do you drive a week?</label>
+            <input type = "text" id= "car" value = {car} onChange = {handleCar}></input>
             <label htmlFor="train">How far do you travel by train per week?</label>
-            <input type = "text" id= "train"></input>
+            <input type = "text" id= "train" value={train} onChange={handleTrain}></input>
             <label htmlFor="bus">How far do you travel by bus per week?</label>
-            <input type = "text" id= "bus"></input>
+            <input type = "text" id= "bus" value= {bus} onChange = {handleBus}></input>
             <label htmlFor="bike">How many miles do you ride your bike per week?</label>
-            <input type = "text" id= "bike"></input>
+            <input type = "text" id= "bike" value={bike} onChange={handleBike}></input>
             <label for="meat">How much meat do you eat? </label>
-            <select id="meatDropdown" name="meat">
-            <option value=1.5>I have meat in most meals</option>
-             <option value=1>I have meat in some meals</option>
-            <option value=0.5>I am a vegetarian</option>
-            <option value=0 >I am a vegan</option>
-                </select>
+            <select id="meatDropdown" name="meat" value={meat} onChange={handleMeat}>
+            <option value="1.5">I have meat in most meals</option>
+            <option value="1">I have meat in some meals</option>
+            <option value="0.5"> I am a vegetarian </option>
+            <option value="0" >I am a vegan</option>
+            </select>
             
             
             <button onClick={handleSubmit}>Calculate</button>
@@ -73,6 +57,7 @@ const TransportForm = ({SelectTransport}) => {
             
                     
         </form>
+    
     )
     
 
