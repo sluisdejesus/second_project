@@ -20,7 +20,7 @@ const TransportForm = ({SelectTransport}) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        
+        console.log(car,train,bus,bike,meat)
         setCar(0);
         setTrain(0);
         setBus(0);
