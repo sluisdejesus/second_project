@@ -11,15 +11,12 @@ const createRouter = require ('./helpers/create_router.js');
 
 MongoClient.connect('mongodb://localhost:27017')
     .then((client) => {
-        const db = client.db('carbonData');
-        const transportCollection = db.collection('transport');
-        const dietCollection = db.collection('diet');
-        const transportCollection = createRouter(transportCollection);
-        const dietCollection = createRouter(dietCollection);
+        const db = client.db('co2Data');
+        const carbonCollection = db.collection('carbon');
+        const carbonRouter = createRouter(carbonCollection);
         })
 
-        app.use('/api/transport', transportRouter)
-        app.use('/api/diet',dietRouter)
+        app.use('/api/carbon', carbonRouter)
     
     .catch(console.error)
 
