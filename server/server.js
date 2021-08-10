@@ -14,9 +14,9 @@ MongoClient.connect('mongodb://localhost:27017')
         const db = client.db('co2Data');
         const carbonCollection = db.collection('carbon');
         const carbonRouter = createRouter(carbonCollection);
-        })
-
         app.use('/api/carbon', carbonRouter)
+    })
+
     
     .catch(console.error)
 
