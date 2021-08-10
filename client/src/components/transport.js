@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 
-const TransportForm = ({handleCalculation, calculation}) => {
+const TransportForm = ({handleCalculation}) => {
     const [car, setCar] = useState(0)
     const [train, setTrain] = useState(0);
     const [bus, setBus] = useState(0);
@@ -44,14 +44,24 @@ const TransportForm = ({handleCalculation, calculation}) => {
         <>
         <form onSubmit={handleSubmit}>
             <h1>Fill in your details</h1>
-            <label htmlFor="car">How much do you drive a week?</label>
+            <div>
+            <label htmlFor="car">How many kilometers do you drive a week?</label>
             <input type = "number" id= "car" value = {car} onChange = {handleCar}></input>
-            <label htmlFor="train">How far do you travel by train per week?</label>
+            </div>
+            <div>
+            <label htmlFor="train">How many kilometers do you travel by train per week?</label>
             <input type = "number" id= "train" value={train} onChange={handleTrain}></input>
-            <label htmlFor="bus">How far do you travel by bus per week?</label>
+            </div>
+            <div>
+            <label htmlFor="bus">How many kilometers do you travel by bus per week?</label>
             <input type = "number" id= "bus" value= {bus} onChange = {handleBus}></input>
+            </div>
+            <div>
             <label htmlFor="bike">How many miles do you ride your bike per week?</label>
             <input type = "number" id= "bike" value={bike} onChange={handleBike}></input>
+            </div>
+
+            <div>
             <label for="meat">How much meat do you eat? </label>
             <select id="meatDropdown" name="meat" value={meat} onChange={handleMeat}>
             <option value="1.5">I have meat in most meals</option>
@@ -59,15 +69,14 @@ const TransportForm = ({handleCalculation, calculation}) => {
             <option value="0.5"> I am a vegetarian </option>
             <option value="0" >I am a vegan</option>
             </select>
+            </div>
             
             
-            <button onClick={handleSubmit}>Calculate</button>
-
-     
+            <button onClick={handleSubmit}>Calculate</button>     
                     
         </form>
         
-       <p>This is your total {calculation}</p> 
+      
     </>
     )
     
