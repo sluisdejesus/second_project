@@ -10,8 +10,22 @@ const FormView = function(form){
 
 FormView.prototype.Events = function () {
     MissingFile.subscribe('carbonCollection:data-loaded', (event) => {
+        const carField = document.querySelector('#car');
+        const carValues = event.detail[0].car;
+
+        const trainField = document.querySelector('#train');
+        const trainValues = event.detail[0].train;
+
         const busField = document.querySelector('#bus');
         const busValues = event.detail[0].bus;
+
+        const bikeField = document.querySelector('#bike');
+        const bikeValues = event.detail[0].bike;
+
+        const meatField = document.querySelector('#meat');
+        const meatValues = event.detail[0].meat;
+
+
     })
 }
 
