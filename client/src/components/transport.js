@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 
 
 const TransportForm = ({SelectTransport}) => {
-    const [car, setCar] = useState("");
-    const [train, setTrain] = useState("");
-    const [bus, setBus] = useState("");
-    const [bike, setBike] = useState("");
-    const [meat, setMeat] = useState("");
+    const [car, setCar] = useState(0)
+    const [train, setTrain] = useState(0);
+    const [bus, setBus] = useState(0);
+    const [bike, setBike] = useState(0);
+    const [meat, setMeat] = useState(0);
     
 
     
@@ -21,11 +21,11 @@ const TransportForm = ({SelectTransport}) => {
     const handleSubmit = event => {
         event.preventDefault();
         
-        setCar("");
-        setTrain("");
-        setBus("");
-        setBike("");
-        setMeat("");
+        setCar(0);
+        setTrain(0);
+        setBus(0);
+        setBike(0);
+        setMeat(0);
     }
 
 
@@ -36,13 +36,13 @@ const TransportForm = ({SelectTransport}) => {
         <form onSubmit={handleSubmit}>
             <h1>Fill in your details</h1>
             <label htmlFor="car">How much do you drive a week?</label>
-            <input type = "text" id= "car" value = {car} onChange = {handleCar}></input>
+            <input type = "number" id= "car" value = {car} onChange = {handleCar}></input>
             <label htmlFor="train">How far do you travel by train per week?</label>
-            <input type = "text" id= "train" value={train} onChange={handleTrain}></input>
+            <input type = "number" id= "train" value={train} onChange={handleTrain}></input>
             <label htmlFor="bus">How far do you travel by bus per week?</label>
-            <input type = "text" id= "bus" value= {bus} onChange = {handleBus}></input>
+            <input type = "number" id= "bus" value= {bus} onChange = {handleBus}></input>
             <label htmlFor="bike">How many miles do you ride your bike per week?</label>
-            <input type = "text" id= "bike" value={bike} onChange={handleBike}></input>
+            <input type = "number" id= "bike" value={bike} onChange={handleBike}></input>
             <label for="meat">How much meat do you eat? </label>
             <select id="meatDropdown" name="meat" value={meat} onChange={handleMeat}>
             <option value="1.5">I have meat in most meals</option>
