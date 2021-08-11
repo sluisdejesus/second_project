@@ -7,6 +7,8 @@ import { render } from 'react-dom'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 
+
+
 function App() {
 
   const [calculation, setCalculation] = useState(0);
