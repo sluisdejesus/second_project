@@ -17,7 +17,7 @@ const HighChart = ({co2Data}) => {
       name: "C02 Footprint Parts Per Million",
       data: [
         ["Your", co2Data],
-        ["Average", 200]
+        ["Average", 331]
       ],
       
     }]
