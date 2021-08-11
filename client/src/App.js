@@ -49,9 +49,9 @@ function App() {
 
   const handleCalculation = (values) => {
 
-    const carTotal = values.car * 168
-    const trainTotal = values.train * 37
-    const busTotal = values.bus * 103
+    const carTotal = values.car * 0.000168
+    const trainTotal = values.train * 0.000037
+    const busTotal = values.bus * 0.000103
     const bikeTotal = values.bike * 0
     const meatTotal = values.meat * 10
 
