@@ -1,5 +1,5 @@
 const express = require('express');
-const ObjectID = require('mongodb').ObjectID;
+const ObjectID = require('mongodb').ObjectId;
 
 const createRouter = function(collection) {
 
@@ -17,9 +17,45 @@ const createRouter = function(collection) {
     });
   });
 
+  router.post('/', (req, res) => {
+    const newData = req.body;
+    collection
+    .insertOne(newData)
+    .then((result) =>{
+        newData['_id'] = result['insertedId']
+        res.json(newData)
+    })
+    .catch( (err) => {
+        console.error(err)
+        error.status(500)
+        res.json ({ status:500 , error: err});
+  });
+});
+
+  router.put('/:id', (req, res) => {
+    const id = req.params.id;
+    const updatedData = req.body;
+    delete updatedData._id
+
+    collection
+    .updateOne({_id: ObjectID(id)}, {$set: updatedData})
+    .then(result => {
+      res.json(result);
+    })
+    .catch( (err) => {
+      console.error(err)
+      error.status(500)
+      res.json ({ status:500 , error: err});
+    });
+  }); 
+
+
+
+  
 
 
   return router;
 };
+
 
 module.exports = createRouter;

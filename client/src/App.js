@@ -1,4 +1,5 @@
 import TransportForm from './components/transport';
+import ChartDisplay from './components/ChartDisplay';
 import './App.css';
 import { useState } from 'react';
 
@@ -24,6 +25,7 @@ function App() {
 
 <>
 <TransportForm  handleCalculation = {handleCalculation} calculation = {calculation}/>
+<ChartDisplay calculation = {calculation}/>
 
 </>
   );
