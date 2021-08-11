@@ -1,9 +1,17 @@
 import TransportForm from './components/transport';
 import ChartDisplay from './components/ChartDisplay';
+import carbonServices from './services/carbonServices';
 import './App.css';
 import { useState } from 'react';
 
 function App() {
+
+  const [co2Data, setco2Data] = useState([]);
+
+  const addCarbonData = newData => {
+    carbonServices.addCarbonData(newData)
+    .then(savedCarbon => setco2Data([...co2Data, savedCarbon]))
+  }
 
   const [calculation, setCalculation] = useState(0);
   const [car, setCar] = useState(0);
@@ -24,8 +32,9 @@ function App() {
   return (
 
 <>
-<TransportForm  handleCalculation = {handleCalculation} calculation = {calculation}/>
+<TransportForm  handleCalculation = {handleCalculation} calculation = {calculation} addCarbonData ={addCarbonData}/>
 <ChartDisplay calculation = {calculation}/>
+
 
 </>
   );

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 
-const TransportForm = ({handleCalculation}) => {
+const TransportForm = ({handleCalculation,addCarbonData}) => {
     const [car, setCar] = useState(0)
     const [train, setTrain] = useState(0);
     const [bus, setBus] = useState(0);
@@ -18,6 +18,21 @@ const TransportForm = ({handleCalculation}) => {
     const handleBike = (event) => setBike(event.target.value);
     const handleMeat = (event) => setMeat(event.target.value);
 
+
+  
+    
+
+    // const handleSubmit = ev => {
+    //     ev.preventDefault();
+    //     addBooking({
+    //       name: name,
+    //       email: email,
+    //       checked_in: checkedIn
+    //     });
+    //     setName("");
+    //     setEmail("");
+    //     setCheckedIn(false);
+    //   }
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -72,10 +87,10 @@ const TransportForm = ({handleCalculation}) => {
             </div>
             
             
-            <button onClick={handleSubmit}>Calculate</button>     
+            <button onClick={handleSubmit}> Calculate </button>
+            
                     
         </form>
-        
       
     </>
     )
