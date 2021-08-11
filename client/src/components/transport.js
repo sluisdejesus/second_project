@@ -45,13 +45,13 @@ const TransportForm = ({handleCalculation, calculation}) => {
         <form onSubmit={handleSubmit}>
             <h1>Fill in your details</h1>
             <label htmlFor="car">How much do you drive a week?</label>
-            <input type = "number" id= "car" value = {car} onChange = {handleCar}></input>
+            <input type = "number" id= "car" min = "0" value = {car} onChange = {handleCar}></input>
             <label htmlFor="train">How far do you travel by train per week?</label>
-            <input type = "number" id= "train" value={train} onChange={handleTrain}></input>
+            <input type = "number" id= "train" min = "0" value={train} onChange={handleTrain}></input>
             <label htmlFor="bus">How far do you travel by bus per week?</label>
-            <input type = "number" id= "bus" value= {bus} onChange = {handleBus}></input>
+            <input type = "number" id= "bus" min = "0" value= {bus} onChange = {handleBus}></input>
             <label htmlFor="bike">How many miles do you ride your bike per week?</label>
-            <input type = "number" id= "bike" value={bike} onChange={handleBike}></input>
+            <input type = "number" id= "bike" min = "0" value={bike} onChange={handleBike}></input>
             <label for="meat">How much meat do you eat? </label>
             <select id="meatDropdown" name="meat" value={meat} onChange={handleMeat}>
             <option value="1.5">I have meat in most meals</option>
