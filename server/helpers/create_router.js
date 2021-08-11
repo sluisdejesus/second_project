@@ -61,7 +61,9 @@ const createRouter = function(collection) {
       res.status(500);
       res.json({ status: 500, error: err });
     });
-  });
+  }); 
+
+  
 
 
 
