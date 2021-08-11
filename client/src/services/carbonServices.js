@@ -29,5 +29,14 @@ const carbonServices = {
         .then(res => res.json());
 
     },
+
+    deleteCarbonData(id){
+        return fetch(baseURL + id, {
+            method: 'DELETE'
+        })
+
+    }
     
 }
+
+export default carbonServices;
