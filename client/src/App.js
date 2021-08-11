@@ -1,17 +1,41 @@
-import TransportForm from './components/transport';
+import CarbonForm from './components/CarbonForm';
 import ChartDisplay from './components/ChartDisplay';
 import carbonServices from './services/carbonServices';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
   const [co2Data, setco2Data] = useState([]);
+  const [allData, setAllData] = useState([]);
+
+  useEffect(() => {
+    carbonServices.getCarbonData()
+      .then(Carbon => setAllData(Carbon));
+  }, []);
+
+  
 
   const addCarbonData = () => {
     carbonServices.addCarbonData(values)
-    .then(savedCarbon => setco2Data([...co2Data, savedCarbon]))
+    .then(savedCarbon => {
+      setco2Data(savedCarbon)
+      setAllData([...allData,savedCarbon])
+    }
+      
+      )
   }
+
+ 
+
+  // const updateCarbonData = () => {
+  //   carbonServices.updateCarbonData(updatedCarbonData);
+
+  //   const updatedCarbonDataIndex = co2Data.findIndex(co2Data => co2Data._id === updatedCarbonData._id);
+  //   const updatedCarbonData = [...co2Data];
+  //   updatedCarbonData[updatedCarbonDataIndex] = updatedCarbonData;
+  //   setco2Data(updatedCarbonData);
+  // };
 
   const [calculation, setCalculation] = useState(0);
   const [values, setValues] = useState(0);
@@ -32,8 +56,8 @@ function App() {
   return (
 
 <>
-<TransportForm  handleCalculation = {handleCalculation} calculation = {calculation} />
-<ChartDisplay calculation = {calculation} addCarbonData ={addCarbonData}/>
+<CarbonForm  handleCalculation = {handleCalculation} calculation = {calculation} />
+<ChartDisplay calculation = {calculation} addCarbonData ={addCarbonData} />
 
 
 </>

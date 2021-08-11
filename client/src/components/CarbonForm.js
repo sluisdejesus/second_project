@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 
-const TransportForm = ({handleCalculation,addCarbonData}) => {
+const CarbonForm = ({handleCalculation,addCarbonData}) => {
     const [car, setCar] = useState(0)
     const [train, setTrain] = useState(0);
     const [bus, setBus] = useState(0);
@@ -98,4 +98,4 @@ const TransportForm = ({handleCalculation,addCarbonData}) => {
 
     
 }   
-export default TransportForm;
+export default CarbonForm;
