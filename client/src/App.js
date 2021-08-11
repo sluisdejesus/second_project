@@ -62,13 +62,16 @@ function App() {
   }
   return (
 
-<>
-<CarbonForm  handleCalculation = {handleCalculation} calculation = {calculation} />
-<ChartDisplay calculation = {calculation} addCarbonData ={addCarbonData} />
-<CarbonList co2Data = {allData} deleteCarbonData = {deleteCarbonData}/>
-<HighChart co2Data = {calculation}/>
-
-</>
+<div>
+  <header> </header>
+  <section>
+<CarbonForm  handleCalculation = {handleCalculation} calculation = {calculation} class ="form"/>
+<ChartDisplay calculation = {calculation} addCarbonData ={addCarbonData} class = "display"/>
+<CarbonList co2Data = {allData} deleteCarbonData = {deleteCarbonData} class = "list"/>
+<HighChart co2Data = {calculation} class = "chart"/>
+</section>
+<footer></footer>
+</div>
   );
 }
 
