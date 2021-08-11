@@ -2,6 +2,10 @@ import TransportForm from './components/transport';
 import ChartDisplay from './components/ChartDisplay';
 import './App.css';
 import { useState } from 'react';
+import React, {} from 'react'
+import { render } from 'react-dom'
+import Highcharts from 'highcharts'
+import HighchartsReact from 'highcharts-react-official'
 
 function App() {
 
