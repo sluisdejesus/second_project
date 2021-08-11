@@ -6,6 +6,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import HighChart from './components/HighChart';
 
+
 function App() {
 
   // const [co2Data, setco2Data] = useState([]);
@@ -61,17 +62,23 @@ function App() {
 
   }
   return (
-
-<div>
-  <header> Carbon footprint calculator, designed to help you make a difference</header>
+    
+    
+    <div class= "body"> 
+    <video autoPlay loop muted id ='video'>
+      <source src='https://www.pexels.com/video/time-lapse-video-of-night-sky-857195/' type = 'video/mp4'/>
+    </video>
+    <h1><img src="/client/src/images/CO2 logo with smoke.png" /> A Carbon footprint calculator, designed to help you make a real difference </h1>
+  {/* <header> A Carbon footprint calculator, designed to help you make a real difference</header> */}
+ 
   <section>
 <CarbonForm  handleCalculation = {handleCalculation} calculation = {calculation} class ="form"/>
 <ChartDisplay calculation = {calculation} addCarbonData ={addCarbonData} class = "display"/>
 <CarbonList co2Data = {allData} deleteCarbonData = {deleteCarbonData} class = "list"/>
 <HighChart co2Data = {calculation} class = "chart"/>
 </section>
-<footer>Codeclan cohort E50. Developed by Sergio Eneide, Craig Smith, Stephanie Lucas, Stephen Corcoran & Sara Luis de Jesus</footer>
-</div>
+<footer>Codeclan cohort E50. Developed by Blue Sky Development: Sergio Eneide, Craig Smith, Stephanie Lucas, Stephen Corcoran & Sara Luis de Jesus</footer>
+</div> 
   );
 }
 
