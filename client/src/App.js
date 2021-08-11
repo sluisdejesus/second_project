@@ -4,6 +4,7 @@ import carbonServices from './services/carbonServices';
 import CarbonList from './components/CarbonList';
 import './App.css';
 import { useEffect, useState } from 'react';
+import HighChart from './components/HighChart';
 
 function App() {
 
@@ -65,6 +66,7 @@ function App() {
 <CarbonForm  handleCalculation = {handleCalculation} calculation = {calculation} />
 <ChartDisplay calculation = {calculation} addCarbonData ={addCarbonData} />
 <CarbonList co2Data = {allData} deleteCarbonData = {deleteCarbonData}/>
+<HighChart co2Data = {calculation}/>
 
 </>
   );
