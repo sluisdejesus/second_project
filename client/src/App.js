@@ -63,14 +63,14 @@ function App() {
   return (
 
 <div>
-  <header> </header>
+  <header> Carbon footprint calculator, designed to help you make a difference</header>
   <section>
 <CarbonForm  handleCalculation = {handleCalculation} calculation = {calculation} class ="form"/>
 <ChartDisplay calculation = {calculation} addCarbonData ={addCarbonData} class = "display"/>
 <CarbonList co2Data = {allData} deleteCarbonData = {deleteCarbonData} class = "list"/>
 <HighChart co2Data = {calculation} class = "chart"/>
 </section>
-<footer></footer>
+<footer>Codeclan cohort E50. Developed by Sergio Eneide, Craig Smith, Stephanie Lucas, Stephen Corcoran & Sara Luis de Jesus</footer>
 </div>
   );
 }
