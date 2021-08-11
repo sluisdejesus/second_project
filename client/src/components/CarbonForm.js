@@ -19,21 +19,6 @@ const CarbonForm = ({handleCalculation,addCarbonData}) => {
     const handleMeat = (event) => setMeat(event.target.value);
 
 
-  
-    
-
-    // const handleSubmit = ev => {
-    //     ev.preventDefault();
-    //     addBooking({
-    //       name: name,
-    //       email: email,
-    //       checked_in: checkedIn
-    //     });
-    //     setName("");
-    //     setEmail("");
-    //     setCheckedIn(false);
-    //   }
-
     const handleSubmit = event => {
         event.preventDefault();
         const values = {
