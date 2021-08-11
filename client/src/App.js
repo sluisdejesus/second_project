@@ -8,13 +8,13 @@ function App() {
 
   const [co2Data, setco2Data] = useState([]);
 
-  const addCarbonData = newData => {
-    carbonServices.addCarbonData(newData)
+  const addCarbonData = () => {
+    carbonServices.addCarbonData(values)
     .then(savedCarbon => setco2Data([...co2Data, savedCarbon]))
   }
 
   const [calculation, setCalculation] = useState(0);
-  const [car, setCar] = useState(0);
+  const [values, setValues] = useState(0);
 
   const handleCalculation = (values) => {
 
@@ -26,14 +26,14 @@ function App() {
 
     const total = carTotal + trainTotal + busTotal + bikeTotal + meatTotal
     setCalculation(total)
-    setCar(carTotal)
+    setValues(values)
 
   }
   return (
 
 <>
-<TransportForm  handleCalculation = {handleCalculation} calculation = {calculation} addCarbonData ={addCarbonData}/>
-<ChartDisplay calculation = {calculation}/>
+<TransportForm  handleCalculation = {handleCalculation} calculation = {calculation} />
+<ChartDisplay calculation = {calculation} addCarbonData ={addCarbonData}/>
 
 
 </>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChartDisplay = ({calculation}) => {
+const ChartDisplay = ({calculation, addCarbonData}) => {
 if (!calculation){
     return (
         
@@ -10,7 +10,7 @@ if (!calculation){
 }
 
 const handleSave = () => {
-
+    addCarbonData()
     
 }
 

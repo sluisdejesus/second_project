@@ -37,11 +37,11 @@ const TransportForm = ({handleCalculation,addCarbonData}) => {
     const handleSubmit = event => {
         event.preventDefault();
         const values = {
-            car:car,
-            train:train,
-            bus:bus,
-            bike:bike,
-            meat:meat
+            car: parseInt(car),
+            train: parseInt(train),
+            bus:parseInt(bus),
+            bike: parseInt(bike),
+            meat: parseInt(meat)
         }
 
         handleCalculation(values)
