@@ -16,6 +16,18 @@ const carbonServices = {
         })
         .then(res => res.json());
 
-    }
+    },
+
+    updateCarbonData(data){
+        return fetch(baseURL + data._id, {
+            method: 'PUT',
+            body: JSON.stringify(data),
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json());
+
+    },
     
 }
