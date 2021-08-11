@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import TransportForm from './components/transport';
+import ChartDisplay from './components/ChartDisplay';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [calculation, setCalculation] = useState(0);
+  const [car, setCar] = useState(0);
+
+  const handleCalculation = (values) => {
+
+    const carTotal = values.car * 168
+    const trainTotal = values.train * 37
+    const busTotal = values.bus * 103
+    const bikeTotal = values.bike * 0
+    const meatTotal = values.meat * 10
+
+    const total = carTotal + trainTotal + busTotal + bikeTotal + meatTotal
+    setCalculation(total)
+    setCar(carTotal)
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+<>
+<TransportForm  handleCalculation = {handleCalculation} calculation = {calculation}/>
+<ChartDisplay calculation = {calculation}/>
+
+</>
   );
 }
 
