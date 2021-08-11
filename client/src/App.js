@@ -1,12 +1,13 @@
 import CarbonForm from './components/CarbonForm';
 import ChartDisplay from './components/ChartDisplay';
 import carbonServices from './services/carbonServices';
+import CarbonList from './components/CarbonList';
 import './App.css';
 import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [co2Data, setco2Data] = useState([]);
+  // const [co2Data, setco2Data] = useState([]);
   const [allData, setAllData] = useState([]);
 
   useEffect(() => {
@@ -19,11 +20,16 @@ function App() {
   const addCarbonData = () => {
     carbonServices.addCarbonData(values)
     .then(savedCarbon => {
-      setco2Data(savedCarbon)
+      // setco2Data(savedCarbon)
       setAllData([...allData,savedCarbon])
     }
       
       )
+  }
+
+  const deleteCarbonData = (id) => {
+    carbonServices.deleteCarbonData(id)
+    setAllData(allData.filter(data => data._id !== id))
   }
 
  
@@ -58,7 +64,7 @@ function App() {
 <>
 <CarbonForm  handleCalculation = {handleCalculation} calculation = {calculation} />
 <ChartDisplay calculation = {calculation} addCarbonData ={addCarbonData} />
-
+<CarbonList co2Data = {allData} deleteCarbonData = {deleteCarbonData}/>
 
 </>
   );
