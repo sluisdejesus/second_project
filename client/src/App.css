@@ -12,20 +12,24 @@
 }
 
 /* body{
-  background-image: url(https://thumbs.dreamstime.com/z/nature-forest-trees-growing-to-upward-to-sun-wallpaper-42907586.jpg);
+  background: url("./images/Background.mp4");
   background-repeat: no-repeat center center fixed;
   -webkit-background-size:cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'COCOMAT',sans-serif;
-} */
+  font-family: 'COCOMAT',sans-serif; */
 
-#video{
-  position: fixed;
+#video-background {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100vh;
+  filter: grayscale(50%);
+  top:0;
+  left: 0;
   z-index: -1;
-  width:100%
 }
+
 
 
 

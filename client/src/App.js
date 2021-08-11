@@ -64,11 +64,13 @@ function App() {
   return (
     
     
-    <div class= "body"> 
-    <video autoPlay loop muted id ='video'>
-      <source src='https://www.pexels.com/video/time-lapse-video-of-night-sky-857195/' type = 'video/mp4'/>
-    </video>
-    <h1><img src="/client/src/images/CO2 logo with smoke.png" /> A Carbon footprint calculator, designed to help you make a real difference </h1>
+    <div> 
+   <video muted autoplay loop id="video-background">
+      <source src="./images/Background.mp4" type="video/mp4"/>
+    </video> 
+    
+
+    <logo><img src="/CO2 logo.png" /> A Carbon footprint calculator, designed to help you make a real difference </logo> 
   {/* <header> A Carbon footprint calculator, designed to help you make a real difference</header> */}
  
   <section>
@@ -82,4 +84,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
