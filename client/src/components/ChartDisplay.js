@@ -4,7 +4,7 @@ const ChartDisplay = ({calculation, addCarbonData, updateCarbonData}) => {
 if (!calculation){
     return (
         
-        <h1>Please enter your data</h1>
+        <h2>Please enter your data</h2>
     )
 
 }

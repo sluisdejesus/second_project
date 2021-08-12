@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Background from "./images/Background2.mp4"
 
 
 
@@ -42,8 +42,22 @@ const CarbonForm = ({handleCalculation,addCarbonData}) => {
 
     return(
         <>
+        {/* <div id = "myVideo"></div>
+        <video className= "my-video"
+
+        autoPlay
+        loop
+        muted
+        style ={{
+            
+        }}
+       >
+            <source src={Background} type="video/mp4"></source>
+            
+        </video> */}
+
         <form className= "form-style" onSubmit={handleSubmit}>
-            <h1>Fill in your details</h1>
+            <h2>Fill in your details</h2>
             <div className="form-label">
             <label htmlFor="car">How many kilometers do you drive a week?</label>
             <input type = "number" id= "car" min = "0" value = {car} onChange = {handleCar}></input>

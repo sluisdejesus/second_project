@@ -5,6 +5,20 @@ import HighchartsReact from 'highcharts-react-official'
 const HighChart = ({co2Data}) => {
 
   const options = {
+
+    chart: {
+      type: 'column',
+      backgroundColor:'rgba(255, 255, 255, 0.8)'
+    },
+    title:{
+      text:''
+    },
+    legend: {  
+      layout:'vertical',
+      align:'center',
+      verticalAling: 'top',
+      floating:false
+    },
   
     title: {
       text: 'C02'
@@ -13,20 +27,24 @@ const HighChart = ({co2Data}) => {
        
       borderColor: "#257025",
       color: "#257025",
-      type: "bar",
-      name: "C02 Footprint metric tonnes",
+      type: "column",
+      name: "C02 Footprint Parts Per Million",
       data: [
         ["Your", co2Data],
-        ["Average", 0.24]
+        ["Average", 200]
       ],
       
+      
     }]
+    
+    
   }
 
   if(co2Data === 0){
     return(
-      <p>Please select some values from above</p>
+      <h3>Please select some values from above</h3>
     )
+    
   }
 
   return(

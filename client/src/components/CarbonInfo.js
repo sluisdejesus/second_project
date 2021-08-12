@@ -18,7 +18,7 @@ const CarbonInfo = ({co2, deleteCarbonData}) => {
 
     return (
         <>
-        <p>Some number here : {total()}</p>
+        <h2>Some number here : {total()}</h2>
         <div>
             <button onClick = {handleDelete}>DELETE ME!</button>
         </div>
