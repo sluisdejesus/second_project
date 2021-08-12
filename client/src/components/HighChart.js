@@ -28,10 +28,10 @@ const HighChart = ({co2Data}) => {
       borderColor: "#257025",
       color: "#257025",
       type: "column",
-      name: "C02 Footprint Parts Per Million",
+      name: "C02 Footprint Parts Per Metric Tons",
       data: [
         ["Your", co2Data],
-        ["Average", 200]
+        ["Average", 0.24]
       ],
       
       

@@ -5,6 +5,7 @@ body{
   font-size: 24px;
   text-align: center;
   
+  
 }
 
 h1 {
@@ -32,6 +33,7 @@ h1 {
   top: 0;
   bottom: 0;
   z-index: -1;
+
 }
 
 
@@ -41,11 +43,25 @@ h1 {
 
 header {
 font-family: 'Cinzel Decorative', cursive;
+background-color: #000000;
+opacity: 60%;
+
+
+
 }
 header p{
   font-family: Arial, Helvetica, sans-serif;
+  
 
   
+}
+
+footer{
+  
+  font-family: 'Cinzel Decorative', cursive;
+background-color: #000000;
+opacity: 60%;
+
 }
 
  /* footer{
@@ -59,6 +75,8 @@ header p{
   color: #8E8E8E;
   text-align: center;
   overflow: auto;
+
+  
 
   
 
@@ -145,7 +163,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
-  color: #000000;
+  color:white;  
   margin: 0;
 }
 
