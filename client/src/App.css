@@ -9,18 +9,20 @@
   cursor:pointer;
   overflow: hidden;
   outline:none;
+  margin-left: 20.5%;
 }
 
-/* body{
-  background: url("./images/Background.mp4");
+
+/* body {
+  
   background-repeat: no-repeat center center fixed;
   -webkit-background-size:cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  font-family: 'COCOMAT',sans-serif; */
+  background-size: cover; */
+  
 
-#video-background {
+/* #video-background {
   position: absolute;
   min-width: 100%;
   min-height: 100vh;
@@ -28,7 +30,9 @@
   top:0;
   left: 0;
   z-index: -1;
-}
+} */
+
+
 
 
 
@@ -36,13 +40,265 @@
   
 
 header {
-  font-family: 'COCOMAT', sans-serif;
+  font-family: 'Datalegreya', sans-serif, white;
 }
 
- footer{
+label {
+  font-family: 'Datalegreya', sans-serif, white;
+  font-size: ;
+}
+
+
+footer{
   height: 5vh;
   margin-top: -5vh;
   position: absolute;
+  margin-left: 14%;
   bottom: 0;
   width: 100%;
+  font-family: 'Datalegreya', sans-serif, white;
+}
+
+
+
+
+.logo { 
+    
+    background: url('./images/CO2 logo.png'); 
+    background-image: 200px;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    font-family: 'Datalegreya', sans-serif, white;
+    
+    
+    
+   
+}
+
+.highcharts-background {
+
+  width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.209);
+    opacity: 0.2;
+    
+
+
+
+
+}
+    
+form {
+
+  
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    flex-wrap: wrap;
+    font-family: 'Datalegreya', sans-serif, white;
+    
+}
+
+
+  
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+div {
+  font-family: 'Datalegreya', sans-serif, white;
+}
+
+.form-style .form-label{
+  width: 90%;
+  margin-left: auto;
+  margin-left: 30%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: 'Datalegreya', sans-serif, white;
+  font-weight: 800;
  }
+
+
+ /* FORM */
+ 
+
+
+
+
+
+
+body {
+  font-family: 'Datalegreya', sans-serif, white;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: white;
+  margin: 0;
+}
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.476)
+    ),
+    url(https://cdn.wallpapersafari.com/25/22/LVxY6h.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 600;
+  line-height: 2.0;
+  
+}
+
+p {
+  font-size: 2.125rem;
+  margin-left: 23%;
+}
+
+h1 {
+  margin-left: 23%;
+
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+  
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.description {
+  font-family: 'Datalegreya', sans-serif, white;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1.0);
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* form */
+
+form {
+  background: var(--color-darkblue-alpha 0.5);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+  border-radius: 5px;
+  
+
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-label {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+  
+}
+
+.Calculate-button {
+  display: block;
+  width: 60%;
+  padding: 0.75rem;
+  background: var(--color-darkblue 0.5);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+ 
+
+
+
+
+
+  

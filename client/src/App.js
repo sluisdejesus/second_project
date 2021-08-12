@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 import HighChart from './components/HighChart';
 
 
+
+
 function App() {
 
   // const [co2Data, setco2Data] = useState([]);
@@ -64,14 +66,17 @@ function App() {
   return (
     
     
-    <div> 
-   <video muted autoplay loop id="video-background">
-      <source src="./images/Background.mp4" type="video/mp4"/>
-    </video> 
+<div> 
+
+
+
+
+
+  
     
 
-    <logo><img src="/CO2 logo.png" /> A Carbon footprint calculator, designed to help you make a real difference </logo> 
-  {/* <header> A Carbon footprint calculator, designed to help you make a real difference</header> */}
+    
+  
  
   <section>
 <CarbonForm  handleCalculation = {handleCalculation} calculation = {calculation} class ="form"/>
@@ -79,9 +84,14 @@ function App() {
 <CarbonList co2Data = {allData} deleteCarbonData = {deleteCarbonData} class = "list"/>
 <HighChart co2Data = {calculation} class = "chart"/>
 </section>
+
+
+
 <footer>Codeclan cohort E50. Developed by Blue Sky Development: Sergio Eneide, Craig Smith, Stephanie Lucas, Stephen Corcoran & Sara Luis de Jesus</footer>
 </div> 
   );
 }
+
+
 
 export default App; 
