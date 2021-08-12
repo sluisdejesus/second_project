@@ -3,11 +3,11 @@ import React from 'react';
 const CarbonInfo = ({co2, deleteCarbonData}) => {
 
     const total = () => {
-        const carTotal = values.car * 0.000168
-        const trainTotal = values.train * 0.000037
-        const busTotal = values.bus * 0.000103
-        const bikeTotal = values.bike * 0
-        const meatTotal = values.meat * 10
+        const carTotal = co2.car * 0.000168
+        const trainTotal = co2.train * 0.000037
+        const busTotal = co2.bus * 0.000103
+        const bikeTotal = co2.bike * 0
+        const meatTotal = co2.meat * 10
 
         return  carTotal + trainTotal + busTotal + bikeTotal + meatTotal
     }
