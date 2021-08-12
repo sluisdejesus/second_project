@@ -109,11 +109,11 @@ function App() {
   </div>
 
   <div className="Company">
-    <div class="container">
+
     <h3>Blue Sky Development</h3>
     <p>Funded company by obligation of CodeClan</p>
     </div>
-  </div>
+
   <div>
     <p className= "copyright"> Blue Sky Development ©2021</p>
   </div>
