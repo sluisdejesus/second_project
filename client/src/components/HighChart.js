@@ -16,7 +16,7 @@ const HighChart = ({co2Data}) => {
     legend: {  
       layout:'vertical',
       align:'center',
-      verticalAling: 'top',
+      verticalAlign: 'top',
       floating:false
     },
   
