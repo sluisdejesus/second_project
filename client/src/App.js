@@ -104,7 +104,7 @@ function App() {
   Developed by Blue Sky Development: 
   </div>
   <div>
-  Sergio Eneide, Craig Smith, Stephanie Lucas, Stephen Corcoran & Sara Luis de Jesus
+  Team TBC
   </div>
 
   <div className="Company">
